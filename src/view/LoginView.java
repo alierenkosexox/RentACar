@@ -41,7 +41,8 @@ public class LoginView extends JFrame {
                 if (loginUser == null){
                     Helper.showMsg("Kullanıcı Bulunamadı !");
                 }else{
-                    System.out.println(loginUser.toString());
+                    AdminView adminView = new AdminView(loginUser);
+                    dispose();
                 }
             }
         });
