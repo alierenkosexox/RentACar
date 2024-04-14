@@ -1,6 +1,7 @@
 package view;
 
 import business.BrandManager;
+import core.Helper;
 import entity.Brand;
 import entity.User;
 
@@ -79,7 +80,17 @@ public class AdminView extends JFrame {
                 }
             });
         });
-        this.brandMenu.add("Sil");
+        this.brandMenu.add("Sil").addActionListener(e -> {
+            if (Helper.confirm("sure")) {
+                int selectBrandId = Integer.parseInt(tbl_brand.getValueAt(tbl_brand.getSelectedRow(), 0).toString());
+                if(this.brandManager.delete(selectBrandId)){
+                    Helper.showMsg("done");
+                    loadBrandTable();
+                }else {
+                    Helper.showMsg("error");
+                }
+            }
+        });
     }
     public void loadBrandTable() {
         Object[] col_brand = {"Marka ID", "Marka Adı"};
