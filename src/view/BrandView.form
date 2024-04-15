@@ -8,7 +8,7 @@
     <properties/>
     <border type="none"/>
     <children>
-      <component id="a37b7" class="javax.swing.JLabel" binding="lbl_brand">
+      <component id="3066f" class="javax.swing.JLabel" binding="lbl_brand">
         <constraints>
           <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
         </constraints>
@@ -17,12 +17,12 @@
           <text value="Marka Ekle / Düzenle"/>
         </properties>
       </component>
-      <vspacer id="42d34">
+      <vspacer id="f6949">
         <constraints>
           <grid row="4" column="0" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
         </constraints>
       </vspacer>
-      <component id="373a7" class="javax.swing.JLabel" binding="lbl_brand_name">
+      <component id="d329f" class="javax.swing.JLabel" binding="lbl_brand_name">
         <constraints>
           <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
         </constraints>
@@ -30,7 +30,7 @@
           <text value="Marka Adı"/>
         </properties>
       </component>
-      <component id="6f390" class="javax.swing.JTextField" binding="fld_brand_name">
+      <component id="69e04" class="javax.swing.JTextField" binding="fld_brand_name">
         <constraints>
           <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
             <preferred-size width="150" height="-1"/>
@@ -38,7 +38,7 @@
         </constraints>
         <properties/>
       </component>
-      <component id="10e23" class="javax.swing.JButton" binding="btn_brand_save">
+      <component id="80e08" class="javax.swing.JButton" binding="btn_brand_save">
         <constraints>
           <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
         </constraints>

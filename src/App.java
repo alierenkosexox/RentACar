@@ -1,14 +1,12 @@
-import core.Db;
+import core.Helper;
 import view.LoginView;
 
-import java.sql.Connection;
-import java.sql.DriverManager;
-
 public class App {
+    public App() {
+    }
+
     public static void main(String[] args) {
-
-        Connection con = Db.getInstance();
-        LoginView loginView = new LoginView();
-
+        Helper.setTheme();
+        new LoginView();
     }
 }

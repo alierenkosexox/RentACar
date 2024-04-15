@@ -1,5 +1,7 @@
 package entity;
 
+import core.ComboItem;
+
 public class Model {
     private int id;
     private int brand_id;
@@ -10,26 +12,11 @@ public class Model {
     private Gear gear;
     private Brand brand;
 
-    public static enum Fuel {
-        GASOLINE,
-        LPG,
-        ELECTRIC,
-        DIESEL
+    public Model() {
     }
-
-    public static enum Gear {
-        MANUEL,
-        AUTO
-    }
-
-    public static enum Type {
-        SEDAN,
-        HACHBACK
-    }
-
 
     public int getId() {
-        return id;
+        return this.id;
     }
 
     public void setId(int id) {
@@ -37,7 +24,7 @@ public class Model {
     }
 
     public int getBrand_id() {
-        return brand_id;
+        return this.brand_id;
     }
 
     public void setBrand_id(int brand_id) {
@@ -45,31 +32,31 @@ public class Model {
     }
 
     public String getName() {
-        return name;
+        return this.name;
     }
 
     public void setName(String name) {
         this.name = name;
     }
 
-    public String getYear() {
-        return year;
-    }
-
-    public void setYear(String year) {
-        this.year = year;
-    }
-
     public Type getType() {
-        return type;
+        return this.type;
     }
 
     public void setType(Type type) {
         this.type = type;
     }
 
+    public String getYear() {
+        return this.year;
+    }
+
+    public void setYear(String year) {
+        this.year = year;
+    }
+
     public Fuel getFuel() {
-        return fuel;
+        return this.fuel;
     }
 
     public void setFuel(Fuel fuel) {
@@ -77,7 +64,7 @@ public class Model {
     }
 
     public Gear getGear() {
-        return gear;
+        return this.gear;
     }
 
     public void setGear(Gear gear) {
@@ -85,11 +72,46 @@ public class Model {
     }
 
     public Brand getBrand() {
-        return brand;
+        return this.brand;
     }
 
     public void setBrand(Brand brand) {
         this.brand = brand;
     }
-}
 
+    public ComboItem getComboItem() {
+        int var10002 = this.getId();
+        String var10003 = this.getBrand().getName();
+        return new ComboItem(var10002, var10003 + " - " + this.getName() + " - " + this.getYear() + " - " + this.getGear());
+    }
+
+    public String toString() {
+        return "Model{id=" + this.id + ", brand_id=" + this.brand_id + ", name='" + this.name + "', type=" + this.type + ", year='" + this.year + "', fuel=" + this.fuel + ", gear=" + this.gear + ", brand=" + this.brand + "}";
+    }
+
+    public static enum Type {
+        SEDAN,
+        HACBACK;
+
+        private Type() {
+        }
+    }
+
+    public static enum Fuel {
+        GASOLINE,
+        LPG,
+        ELECTRIC,
+        DIESEL;
+
+        private Fuel() {
+        }
+    }
+
+    public static enum Gear {
+        MANUEL,
+        AUTO;
+
+        private Gear() {
+        }
+    }
+}
