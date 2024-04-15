@@ -10,21 +10,21 @@ public class Model {
     private Gear gear;
     private Brand brand;
 
-    public enum Fuel {
+    public static enum Fuel {
         GASOLINE,
         LPG,
         ELECTRIC,
         DIESEL
     }
 
-    public enum Gear {
+    public static enum Gear {
         MANUEL,
         AUTO
     }
 
-    public enum Type {
+    public static enum Type {
         SEDAN,
-        HACBACK
+        HACHBACK
     }
 
 
